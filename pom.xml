@@ -15,6 +15,7 @@
         <hibernate-entitymanager.version>5.0.2.Final</hibernate-entitymanager.version>
         <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
         <commons-dbcp2.version>2.1.1</commons-dbcp2.version>
+        <jackson-databind.version>2.5.3</jackson-databind.version>
     </properties>
 
     <packaging>war</packaging>
@@ -38,7 +39,15 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet-api.version}</version>
         </dependency>
-            <!-- Database -->
+
+        <!-- JSON converter -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson-databind.version}</version>
+        </dependency>
+
+        <!-- Database -->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
